@@ -1,0 +1,36 @@
+{
+  "RestaurantData": [
+    {
+      "id": 1,
+      "name": "Lucky Restaurant",
+      "email": "lucky@gmail.com",
+      "address": "Awadhpuri, Kanpur",
+      "mobile": "1234567890",
+      "service": "Best non veg food"
+    },
+    {
+      "id": 2,
+      "name": "Narayana Restaurant",
+      "email": "Narayana@gmail.com",
+      "address": "Gurudev Chauraha Kanpur",
+      "mobile": "0987654321",
+      "service": "Best Veg food"
+    }
+  ],
+  "UserData": [
+    {
+      "name": "Avanish",
+      "mobile": "8173947723",
+      "email": "avanish014@gmail.com",
+      "password": "Password@123",
+      "id": 1
+    },
+    {
+      "name": "Avanish Gupta",
+      "mobile": "8173947723",
+      "email": "avanishag11@gmail.com",
+      "password": "Password@123",
+      "id": 2
+    }
+  ]
+}
