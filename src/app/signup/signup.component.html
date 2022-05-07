@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Restaurant SignUp</h1>
+                    <h5>Welcome to Restaurant Application</h5>
+                </div>
+                <hr>
+                <form [formGroup]="formValue">
+                    <label style="color: red;" *ngIf="IsValidModel">{{ErrorMessage}}</label>
+                    <div class="mb-3">
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control" id="Name"  
+                            placeholder="Enter Name" formControlName="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Mobile"> Mobile Number</label>
+                        <input type="text" class="form-control" id="Mobile"  
+                            placeholder="Enter Mobile" formControlName="mobile" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Email">Email address</label>
+                        <input type="email" class="form-control" id="Email"  
+                            placeholder="Enter email" formControlName="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Password">Password</label>
+                        <input type="password" class="form-control" id="Password" placeholder="Enter Password"
+                            formControlName="password" required>
+                    </div>
+                    <button class="btn btn-success" (click)="SignUp()" [disabled] = "!formValue.valid">SignUp</button>
+                </form>
+                <a routerLink="/login" >Already Member ? Click to Login</a>
+            </div>
+        </div>
+    </div>
+</div>

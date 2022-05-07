@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Restaurant Login</h1>
+                    <h5>Feel free to login</h5>
+                </div>
+                <hr>
+                <form [formGroup]="formValue">
+                    <div class="mb-3">
+                        <label for="Email">Email address</label><span class="required"> *</span>
+                        <input type="email" class="form-control" id="Email"   
+                            placeholder="Enter email" formControlName="email" required="true">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Password">Password</label><span class="required"> *</span>
+                        <input type="password" class="form-control" id="Password" placeholder="Enter Password"
+                            formControlName="password" required="true">
+                    </div>
+                    <label *ngIf="!isValidUser" style="color: red;">{{errorMessage}}</label>
+                    <br />
+                    <button class="btn btn-success" (click)="ValidateUser()" [disabled]="!formValue.valid">Login</button>
+                </form>
+                <a routerLink="/signup">New User ? Click to SignUp</a>
+            </div>
+        </div>
+    </div>
+</div>
